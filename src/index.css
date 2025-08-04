@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* In your global stylesheet */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* width for vertical scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e2e8f0; /* Tailwind slate-300 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9694FF; /* Tailwind gray-500 */
+  border-radius: 9999px;
+  border: 2px solid #e2e8f0;
+}
