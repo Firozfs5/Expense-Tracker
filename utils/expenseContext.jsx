@@ -1,6 +1,6 @@
-import { createContext } from "react";
+// import { createContext } from "react";
 
-const expenseContext=createContext({
-      expenseData:[]
-})
-export default expenseContext;
+// const expenseContext=createContext({
+//       expenseData:[]
+// })
+// export default expenseContext;

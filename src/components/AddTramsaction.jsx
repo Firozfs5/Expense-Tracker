@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utils/expenseDataSlice";
 
-const AddTransaction=({expenseData,setExpenseData})=>{
+const AddTransaction=()=>{
 
     let [Name,setName]=useState("");
     let [Money,setMoney]=useState("");
+
+    let dispatch=useDispatch();
 
     function handleOnClick(){
 
@@ -12,16 +16,11 @@ const AddTransaction=({expenseData,setExpenseData})=>{
             alert("Yov'e Have'nt filled all Data")
             return;
         }
-
-
-        if(expenseData.length==0){
-        setExpenseData([{name:(Name),money:Number(Money)}])
-        }else{
-        setExpenseData([{name:(Name),money:Number(Money)},...expenseData])
-        }
-
+       
+        dispatch(addItem({name:Name,money:Number(Money)}))
         setMoney("");
-        setName("")
+        setName("")        
+
     }
 
     return (

@@ -1,15 +1,21 @@
+import { useDispatch } from "react-redux";
+import { removeItem } from "../../utils/expenseDataSlice";
 
-const HistoryItems=({data,setExpenseData,toDelete,index})=>{
+// const HistoryItems=({data,setExpenseData,toDelete,index})=>{
+const HistoryItems=({data,index})=>{
 
+    let dispatch=useDispatch();
     
     function handleClick(){
-        let copyData=toDelete;  
-        // console.log(index);
+        // {let copyData=toDelete;  
+        // // console.log(index);
         
-        copyData.splice(index,1);
-        // console.log(copyData);
+        // copyData.splice(index,1);
+        // // console.log(copyData);
         
-        setExpenseData([...copyData])
+        // setExpenseData([...copyData])}
+
+        dispatch(removeItem(index))
     }
 
 

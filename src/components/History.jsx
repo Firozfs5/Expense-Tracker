@@ -1,9 +1,10 @@
+import { useSelector } from "react-redux";
 import HistoryItems from "./HistoryItems"
 
 
-const History=({expenseData,setExpenseData})=>{
-    // console.log(expenseData);
+const History=()=>{
     
+    let cart=useSelector((store)=>store.expense.dataItems)
 
     return (
        
@@ -13,10 +14,9 @@ const History=({expenseData,setExpenseData})=>{
         
         <div className="mt-3 h-[192px] p-2 overflow-y-auto custom-scrollbar">
             {
-                (expenseData.length==0)?
+                (cart.length==0)?
                 (<HistoryItems data={{name:"No Transaction Yet"}}/>)
-                :(expenseData.map((el,idx)=><HistoryItems key={idx} data={el} 
-                toDelete={expenseData} index={idx} setExpenseData={setExpenseData}/>))
+                :(cart.map((el,idx)=><HistoryItems key={idx} data={el} index={idx} />))                
             } 
         </div>
       </div>    
