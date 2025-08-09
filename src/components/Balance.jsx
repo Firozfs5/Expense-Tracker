@@ -59,23 +59,23 @@ const Balance=()=>{
     return ( 
         <div className=" mt-4 w-88 p-3">
             <div className=" p-1 mb-2 ">
-                <h3 className="font-semibold text-[12px]">YOUR BALANCE</h3>
-                <h1 className="font-semibold text-2xl">
+                <h3 className="font-semibold text-[12px] mb-1"><span className="bg-white p-1.5 rounded-xl">YOUR BALANCE</span></h3>
+                <h1 className="font-semibold text-2xl mt-3 dark:text-white">
                     ${funcBalance()}
                 </h1>
             </div>
 
-            <div className="bg-white flex justify-around items-center p-2 border-b-2 border-gray-400 rounded">
+            <div className="bg-white dark:bg-[#717171] flex justify-around items-center p-2 border-b-2 border-gray-400 rounded">
 
                <div className=" flex flex-col p-2 items-center justify-center ">
-                <span className="font-medium text-[13px] ">INCOME</span> 
-                <span className="text-green-500 text-[19px] font-normal">${(saving()==undefined)?0:saving()}</span>
+                <span className="font-medium text-[13px] dark:text-white">INCOME</span> 
+                <span className="text-green-500 text-[19px] font-normal ">${(saving()==undefined)?0:saving()}</span>
                </div>
 
             <span className="bg-gray-300 w-[2px] h-9"></span>
 
                <div className=" flex flex-col p-2 items-center justify-center ">
-                 <span className="font-medium text-[13px]">EXPENSE</span>
+                 <span className="font-medium text-[13px] dark:text-white">EXPENSE</span>
                  <span className="text-red-500 text-[19px] font-normal">${(expense()==undefined)?0:(expense())}</span>
                </div>   
             </div>

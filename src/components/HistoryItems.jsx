@@ -20,7 +20,8 @@ const HistoryItems=({data,index})=>{
 
 
     return (
-        <div className={"flex justify-between w-[312px] bg-white hover:bg-[#faf9f9] p-1 mb-1 rounded border-r-5 "+((data.money>0)?" border-green-400":"border-red-400")}>
+        <div 
+        className={"flex dark:bg-[#717171] dark:hover:bg-[#575757] dark:text-white justify-between w-[312px] bg-white hover:bg-[#faf9f9] p-1 mb-1 rounded border-r-5 "+((data.money>0)?" border-green-400":"border-red-400")}>
             
             <span><button onClick={()=>handleClick()}>❌</button>  {data.name}</span>
             

@@ -14,3 +14,6 @@
   border-radius: 9999px;
   border: 2px solid #e2e8f0;
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
